@@ -59,10 +59,12 @@ class Contract {
     async exportContractPDF(_url, _savePath) {
         (async () => {
             const url = _url;
-        
+
+
             // Launch Puppeteer with minimal configuration and use system-installed Chromium
             const browser = await puppeteer.launch({
-                executablePath: '/usr/bin/chromium-browser', // Path to the Chromium executable
+                executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', // windows
+                // executablePath: '/usr/bin/chromium-browser', // Path to the Chromium executable - rpi4
                 headless: true,
                 args: [
                     '--no-sandbox',
@@ -73,7 +75,7 @@ class Contract {
                     '--window-size=1920x1080'
                 ]
             });
-        
+
             const page = await browser.newPage();
         
             // Go to the page and wait for the content to load

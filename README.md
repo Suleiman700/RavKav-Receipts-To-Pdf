@@ -77,7 +77,24 @@ Use this endpoint to get a PDF report for a specified month and year. Replace <M
 
 ---
 
-## 5. Delete PDFs
+## 5. Get XLSX
+
+Once you are logged in, you can retrieve a XLSX report for a specific month and year.
+
+```text
+IP:PORT/get_sheet <MONTH> <YEAR> <ACCESS_TOKEN_FROM_LOGIN_STEP>
+```
+
+Example
+```text
+IP:PORT/get_sheet 05 2024 132
+```
+
+Use this endpoint to get a PDF report for a specified month and year. Replace <MONTH>, <YEAR>, and <ACCESS_TOKEN> with the appropriate values. The access token is obtained from the login step.
+
+---
+
+## 6. Delete PDFs
 
 After retrieving the PDF, make sure to delete the generated files to manage storage and privacy.
 
